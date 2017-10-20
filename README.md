@@ -1,4 +1,4 @@
-# PLUGIN_TITLE [![Build Status][ci-img]][ci]
+# postcss-node-modules-replacer [![Build Status][ci-img]][ci]
 
 [PostCSS] plugin replaces path from node_modules to ~.
 
@@ -6,7 +6,7 @@
 [ci-img]:  https://travis-ci.org/dichuvichkin/postcss-node-modules-replacer.svg
 [ci]:      https://travis-ci.org/dichuvichkin/postcss-node-modules-replacer
 
-```css
+```scss
 .foo {
     @import "../../../../../../../node_modules/billing-ui/variables";
     @import "../../../../../../../node_modules/billing-ui/placeholders";
@@ -15,7 +15,7 @@
 }
 ```
 
-```css
+```scss
 .foo {
     @import "~billing-ui/variables";
     @import "~billing-ui/placeholders";
