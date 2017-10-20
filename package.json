@@ -1,19 +1,19 @@
 {
-  "name": "PLUGIN_NAME",
+  "name": "postcss-node-modules-replacer",
   "version": "0.0.0",
-  "description": "PostCSS plugin PLUGIN_DESC",
+  "description": "PostCSS plugin replaces path from node_modules to ~",
   "keywords": [
     "postcss",
     "css",
-    "postcss-plugin"KEYWORDS
+    "postcss-plugin"
   ],
-  "author": "AUTHOR_NAME <AUTHOR_EMAIL>",
+  "author": "Dmitriy Chuvichkin <dichuvichkin@gmail.com>",
   "license": "MIT",
-  "repository": "GITHUB_NAME/PLUGIN_NAME",
+  "repository": "dichuvichkin/postcss-node-modules-replace",
   "bugs": {
-    "url": "https://github.com/GITHUB_NAME/PLUGIN_NAME/issues"
+    "url": "https://github.com/dichuvichkin/postcss-node-modules-replace/issues"
   },
-  "homepage": "https://github.com/GITHUB_NAME/PLUGIN_NAME",
+  "homepage": "https://github.com/dichuvichkin/postcss-node-modules-replace",
   "dependencies": {
     "postcss": "^6.0.1"
   },
@@ -23,7 +23,8 @@
     "jest": "^20.0.0"
   },
   "scripts": {
-    "test": "jest && eslint *.js"
+    "test": "jest && eslint *.js",
+    "test:watch": "jest --watchAll && eslint *.js"
   },
   "eslintConfig": {
     "extends": "eslint-config-postcss/es5",

@@ -1,13 +1,10 @@
-var postcss = require('postcss');
+const postcss = require('postcss');
 
-module.exports = postcss.plugin('PLUGIN_NAME', function (opts) {
-    opts = opts || {};
-
-    // Work with options here
-
-    return function (root, result) {
-
-        // Transform CSS AST here
-
+module.exports = postcss.plugin('postcss-node-modules-replacer', () => {
+    const re = new RegExp('(../){1,}(node_modules/){1}', 'g');
+    return css => {
+        css.walkAtRules(atRule => {
+            atRule.params = atRule.params.toString().replace(re, '~');
+        });
     };
 });
